@@ -31,8 +31,8 @@ steps:
 
 - task: PublishCodeCoverageResults@1
   inputs:
-    codeCoverageTool: 'cobertura' # Options: cobertura, jaCoCo
+    codeCoverageTool: Cobertura
     summaryFileLocation: '$(System.DefaultWorkingDirectory)/**/*-coverage.xml'
-    #reportDirectory: '$(System.DefaultWorkingDirectory)/**/coverage'
+    reportDirectory: '$(System.DefaultWorkingDirectory)/**/html-report'
     #additionalCodeCoverageFiles: # Optional
-    #failIfCoverageEmpty: false # Optional
+    failIfCoverageEmpty: true
